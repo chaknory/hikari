@@ -17,10 +17,10 @@ pipeline {
         }
         stage('Build') {
      
-                
+        
             steps {
                 echo 'Building..0'
-                echo "${env.NODE_NAME}"
+               // echo "${env.NODE_NAME}"
                 
                 sh 'printenv'
                 echo 'Building..'
