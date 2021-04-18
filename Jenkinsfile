@@ -12,13 +12,19 @@ pipeline {
         stage('clone') {
             steps {
                 echo 'clone..'
-                //git 'https://github.com/chaknory/hikari.git'
+                git 'https://github.com/chaknory/hikari.git'
             }
         }
         stage('Build') {
+            when {
+                    expression{env.BRANCH_NAME != 'master'}
+                    
+                }
+                
             steps {
                 echo 'Building..0'
-            echo "${env.NODE_NAME}"
+                echo "${env.NODE_NAME}"
+                
                 sh 'printenv'
                 echo 'Building..'
                // sh 'mvn clean install'
