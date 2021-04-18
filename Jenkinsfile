@@ -1,8 +1,7 @@
 pipeline {
     agent any
     environment {
-        DISABLE_AUTH = 'true'
-        DB_ENGINE    = 'sqlite'
+        POM_VERSION = readMavenPom().getVersion()
     }
     tools { 
         maven 'maven-3.6.3' 
@@ -28,7 +27,7 @@ pipeline {
                 }
 
                 echo 'Building..0'
-               // echo "${env.NODE_NAME}"
+                echo "${POM_VERSION}"
                 
                 sh 'printenv'
                 echo 'Building..'
