@@ -11,7 +11,7 @@ pipeline {
     stages {
         stage('clone') {
             steps {
-            //    echo 'clone..'
+                echo 'clone..'
             //    git 'https://github.com/chaknory/hikari.git'
             }
         }
