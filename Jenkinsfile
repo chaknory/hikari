@@ -16,15 +16,17 @@ pipeline {
             }
         }
         stage('Build') {
-            script {
+            
+        
+            steps {
+                script {
                     if (env.BRANCH_NAME == 'master') {
                         echo 'I only execute on the master branch'
                     } else {
                         echo 'I execute elsewhere'
                     }
                 }
-        
-            steps {
+
                 echo 'Building..0'
                // echo "${env.NODE_NAME}"
                 
