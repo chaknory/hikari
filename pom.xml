@@ -7,7 +7,7 @@
     <artifactId>spring-data-jpa</artifactId>
     <packaging>jar</packaging>
     <name>Spring Boot Spring Data JPA</name>
-    <version>1.0</version>
+    <version>1.1.0</version>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
